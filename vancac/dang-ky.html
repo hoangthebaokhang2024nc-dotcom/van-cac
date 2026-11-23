@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - Văn Các</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>VĂN CÁC</h1>
+    <p>Không gian đọc và lưu giữ tác phẩm</p>
+</header>
+
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="dang-nhap.html">Đăng nhập</a>
+</nav>
+
+<main>
+    <section class="upload-form">
+        <h2>TẠO TÀI KHOẢN</h2>
+
+        <label for="username">Tên đăng nhập</label>
+        <input
+            type="text"
+            id="username"
+            placeholder="Nhập tên đăng nhập"
+            required
+        >
+
+        <label for="email">Địa chỉ Email</label>
+        <input
+            type="email"
+            id="email"
+            placeholder="Nhập địa chỉ Email"
+            required
+        >
+
+        <label for="password">Mật khẩu</label>
+        <input
+            type="password"
+            id="password"
+            placeholder="Nhập mật khẩu"
+            required
+        >
+
+        <label for="confirm-password">Nhập lại mật khẩu</label>
+        <input
+            type="password"
+            id="confirm-password"
+            placeholder="Nhập lại mật khẩu"
+            required
+        >
+
+        <button onclick="registerAccount()">ĐĂNG KÝ</button>
+
+        <p id="register-message"></p>
+
+        <p>Đã có tài khoản?
+            <a href="dang-nhap.html">Đăng nhập</a>
+        </p>
+    </section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

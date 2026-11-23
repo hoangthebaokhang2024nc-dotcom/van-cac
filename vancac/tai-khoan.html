@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài khoản cá nhân - Văn Các</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>VĂN CÁC</h1>
+    <p>Không gian đọc và lưu giữ tác phẩm</p>
+</header>
+
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="dang-truyen.html">Đăng truyện</a>
+</nav>
+
+<main>
+
+    <section class="welcome">
+        <img id="account-avatar"
+             src=""
+             alt="Ảnh đại diện"
+             style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
+
+        <h2 id="account-name">Tên người dùng</h2>
+        <p>Trang cá nhân Văn Các</p>
+    </section>
+
+    <section class="upload-form">
+        <h2>THƯ VIỆN CÁ NHÂN</h2>
+
+        <button onclick="showAccountTab('history')">
+            📖 Lịch sử đọc truyện
+        </button>
+
+        <button onclick="showAccountTab('favorites')">
+            ⭐ Truyện yêu thích
+        </button>
+
+        <button onclick="showAccountTab('stories')">
+            ✍️ Truyện sáng tác
+        </button>
+    </section>
+
+    <section class="welcome" id="account-content">
+        <h2>Chào mừng đến với trang cá nhân!</h2>
+        <p>Chọn một mục phía trên để xem nội dung.</p>
+    </section>
+
+    <section class="upload-form">
+        <h2>TÀI KHOẢN</h2>
+
+        <button onclick="showAccountTab('settings')">
+            ⚙️ Cài đặt tài khoản
+        </button>
+
+        <div id="account-settings" style="display:none; margin-top:20px;">
+
+            <h3>Đổi ảnh đại diện</h3>
+
+            <input type="file"
+                   id="new-avatar"
+                   accept="image/*">
+
+            <button onclick="changeAvatar()">
+                LƯU ẢNH ĐẠI DIỆN
+            </button>
+
+            <hr>
+
+            <h3>Đổi tên</h3>
+
+            <input type="text"
+                   id="new-username"
+                   placeholder="Nhập tên mới">
+
+            <button onclick="changeUsername()">
+                ĐỔI TÊN
+            </button>
+
+            <hr>
+
+            <h3>Đổi mật khẩu</h3>
+
+            <input type="password"
+                   id="old-password"
+                   placeholder="Mật khẩu hiện tại">
+
+            <input type="password"
+                   id="new-password"
+                   placeholder="Mật khẩu mới">
+
+            <input type="password"
+                   id="confirm-new-password"
+                   placeholder="Nhập lại mật khẩu mới">
+
+            <button onclick="changePassword()">
+                ĐỔI MẬT KHẨU
+            </button>
+
+            <hr>
+
+            <!-- CHUYỂN ĐỔI TÀI KHOẢN -->
+            <h3>🔄 Chuyển đổi tài khoản</h3>
+
+            <p>Chọn một tài khoản đã đăng ký trên thiết bị này:</p>
+
+            <select id="switch-account-select">
+                <option value="">Chọn tài khoản</option>
+            </select>
+
+            <button onclick="switchAccount()">
+                CHUYỂN TÀI KHOẢN
+            </button>
+
+            <p id="switch-account-message"></p>
+
+            <hr>
+
+            <button onclick="logoutAccount()">
+                🚪 ĐĂNG XUẤT
+            </button>
+
+            <p id="settings-message"></p>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 VĂN CÁC</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

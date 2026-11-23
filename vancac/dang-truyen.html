@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đăng truyện - Văn Các</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>VĂN CÁC</h1>
+        <p>Không gian đọc và lưu giữ tác phẩm</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="dang-truyen.html">Đăng truyện</a>
+        <div id="account-area"></div>
+    </nav>
+
+    <main>
+
+        <section class="welcome">
+            <h2>ĐĂNG TẢI TÁC PHẨM</h2>
+            <p>Chia sẻ câu chuyện và tác phẩm của bạn với mọi người.</p>
+        </section>
+
+        <section class="upload-form">
+
+            <h2>THÔNG TIN TÁC PHẨM</h2>
+
+            <label for="title">Tên tác phẩm:</label>
+            <input
+                type="text"
+                id="title"
+                placeholder="Nhập tên tác phẩm..."
+                required
+            >
+
+            <label for="genre">Thể loại:</label>
+            <select id="genre" required>
+                <option value="">-- Chọn thể loại --</option>
+                <option value="truyện ngắn">Truyện ngắn</option>
+                <option value="chiến tranh">Chiến tranh</option>
+                <option value="Huyền huyễn">Huyền huyễn</option>
+                <option value="Đô thị">Đô thị</option>
+                <option value="Khoa huyễn">Khoa huyễn</option>
+                <option value="Trọng sinh">Trọng sinh</option>
+                <option value="Xuyên không">Xuyên không</option>
+                <option value="Lịch sử">Lịch sử</option>
+                <option value="Quân sự">Quân sự</option>
+                <option value="Kinh dị">Kinh dị</option>
+                <option value="Trinh thám">Trinh thám</option>
+                <option value="Nghị luận văn học ">Nghị luận văn học</option>
+                <option value="Nghị luận xã hội, tiểu luận">Nghị luận xã hội, tiểu luận</option>
+                <option value="Đồng nhân">Đồng nhân</option>
+                <option value="Khác">Khác</option>
+            </select>
+
+            <label for="description">Giới thiệu tác phẩm:</label>
+            <textarea
+                id="description"
+                rows="5"
+                placeholder="Viết phần giới thiệu tác phẩm..."
+            ></textarea>
+
+            <label for="status">Trạng thái:</label>
+            <select id="status">
+                <option value="Đang tiến hành">Đang tiến hành</option>
+                <option value="Đã hoàn thành">Đã hoàn thành</option>
+                <option value="Tạm ngưng">Tạm ngưng</option>
+            </select>
+
+            <label for="cover">Ảnh bìa:</label>
+            <input
+                type="file"
+                id="cover"
+                accept="image/*"
+            >
+
+            <hr>
+
+            <h2>CHƯƠNG ĐẦU TIÊN</h2>
+
+            <label for="chapter-title">Tên chương:</label>
+            <input
+                type="text"
+                id="chapter-title"
+                placeholder="Ví dụ: Chương 1 - Khởi đầu"
+                required
+            >
+
+            <label for="content">Nội dung chương:</label>
+            <textarea
+                id="content"
+                rows="15"
+                placeholder="Nhập nội dung chương đầu tiên..."
+                required
+            ></textarea>
+
+            <button onclick="publishBook()">
+                ĐĂNG TÁC PHẨM
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 VĂN CÁC - Không gian đọc và lưu giữ tác phẩm</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f1e9;
+    color: #29251f;
+}
+
+header {
+    background: #29251f;
+    color: #e8d5ad;
+    text-align: center;
+    padding: 35px;
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: 6px;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+nav {
+    background: #40372d;
+    padding: 16px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+nav a:hover {
+    color: #e8c98d;
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #5c4630;
+}
+
+.welcome {
+    background: #e8dfcf;
+    padding: 45px;
+    border-radius: 10px;
+}
+
+.welcome p {
+    margin-top: 12px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+button {
+    background: #65503b;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #92734f;
+}
+
+footer {
+    background: #29251f;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.book-card h3 {
+    color: #65503b;
+    margin-bottom: 15px;
+}
+
+.book-card p {
+    margin-bottom: 12px;
+}.upload-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.upload-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.upload-form input,
+.upload-form select,
+.upload-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial;
+}
+
+.upload-form textarea {
+    resize: vertical;
+}
+
+.upload-form button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+}/* =================================
+   THƯ VIỆN: 5 TÁC PHẨM MỘT HÀNG
+================================= */
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.book-card {
+    min-width: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.book-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.book-card h3 {
+    font-size: 16px;
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+.book-card p {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.book-card button {
+    font-size: 12px;
+    padding: 7px 9px;
+}
+
+/* Màn hình nhỏ */
+@media (max-width: 900px) {
+    .book-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .book-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}/* DANH SÁCH THỂ LOẠI */
+
+.genre-dropdown select {
+    padding: 12px 18px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    min-width: 200px;
+    outline: none;
+}
+
+.genre-dropdown select:hover {
+    border-color: #8b5e3c;
+}

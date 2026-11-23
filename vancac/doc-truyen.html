@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đọc truyện - Văn Các</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>VĂN CÁC</h1>
+    <p>Không gian đọc và lưu giữ tác phẩm</p>
+</header>
+
+<nav>
+    <a href="index.html">Trang chủ</a>
+</nav>
+
+<main>
+    <section class="welcome">
+        <h2 id="book-title">Tên tác phẩm</h2>
+        <p id="book-author"></p>
+    </section>
+
+    <section class="upload-form">
+        <h2 id="chapter-title">Tên chương</h2>
+
+        <div id="chapter-content"
+             style="white-space: pre-wrap; line-height: 2;">
+        </div>
+
+        <hr>
+
+        <button onclick="previousChapter()">Chương trước</button>
+        <button onclick="nextChapter()">Chương tiếp</button>
+    </section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Các - Thư viện tác phẩm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>VĂN CÁC</h1>
+    <p>Không gian đọc và lưu giữ tác phẩm</p>
+</header>
+
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="dang-truyen.html">Đăng truyện</a>
+    <a href="dang-ky.html">Đăng ký</a>
+    <a href="dang-nhap.html">Đăng nhập</a>
+
+    <div id="account-area"></div>
+</nav>
+
+<main>
+
+    <section class="welcome">
+        <h2>Chào mừng đến với Văn Các</h2>
+        <p>Nơi lưu giữ, chia sẻ và khám phá những tác phẩm văn học.</p>
+    </section>
+
+    <!-- DANH MỤC THỂ LOẠI -->
+    <section class="upload-form">
+        <h2>Danh mục tác phẩm</h2>
+
+        <div class="genre-dropdown">
+            <select id="genre-filter" onchange="filterBooks(this.value)">
+                <option value="all">Thể loại ▼</option>
+                <option value="truyện ngắn">Truyện ngắn</option>
+                <option value="chiến tranh">Chiến tranh</option>
+                <option value="Huyền huyễn">Huyền huyễn</option>
+                <option value="Đô thị">Đô thị</option>
+                <option value="Khoa huyễn">Khoa huyễn</option>
+                <option value="Trọng sinh">Trọng sinh</option>
+                <option value="Xuyên không">Xuyên không</option>
+                <option value="Lịch sử">Lịch sử</option>
+                <option value="Quân sự">Quân sự</option>
+                <option value="Kinh dị">Kinh dị</option>
+                <option value="Trinh thám">Trinh thám</option>
+                <option value="Nghị luận văn học ">Nghị luận văn học </option>
+                <option value="Nghị luận xã hội, tiểu luận">Nghị luận xã hội, tiểu luận</option>
+                <option value="Đồng nhân">Đồng nhân</option>
+                <option value="Khác">Khác</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- THƯ VIỆN TÁC PHẨM -->
+    <section class="welcome">
+
+        <h2>Thư viện tác phẩm</h2>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="search-book"
+                placeholder="Nhập tên tác phẩm cần tìm..."
+                oninput="searchBooks()"
+            >
+
+            <button onclick="searchBooks()">
+                TÌM KIẾM
+            </button>
+        </div>
+
+        <div id="book-list" class="book-list">
+            <p>Chưa có tác phẩm nào.</p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 VĂN CÁC - Không gian đọc và lưu giữ tác phẩm</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
